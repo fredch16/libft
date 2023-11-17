@@ -6,21 +6,11 @@
 /*   By: fcharbon <fcharbon@student.42london.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 21:12:27 by fcharbon          #+#    #+#             */
-/*   Updated: 2023/11/07 16:26:20 by fcharbon         ###   ########.fr       */
+/*   Updated: 2023/11/17 17:25:50 by fcharbon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-
-int	ft_strlen(char *string)
-{
-	int	length;
-
-	length = 0;
-	while (*string++)
-		length++;
-	return (length);
-}
+#include "libft.h"
 
 char	*ft_strcpy(char *dest, char *src)
 {

@@ -6,28 +6,11 @@
 /*   By: fcharbon <fcharbon@student.42london.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 17:23:44 by fcharbon          #+#    #+#             */
-/*   Updated: 2023/11/06 17:30:33 by fcharbon         ###   ########.fr       */
+/*   Updated: 2023/11/17 17:26:45 by fcharbon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
-
-void	*ft_memset(void *s, int c, size_t n)
-{
-	unsigned char	*ptr;
-	unsigned char	val;
-	size_t			i;
-
-	ptr = (unsigned char *)s;
-	val = (unsigned char)c;
-	i = 0;
-	while (i < n)
-	{
-		ptr[i] = val;
-		i++;
-	}
-	return (s);
-}
+#include "libft.h"
 
 void	ft_bzero(void *s, size_t n)
 {

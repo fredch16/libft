@@ -6,13 +6,13 @@
 /*   By: fcharbon <fcharbon@student.42london.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 18:05:37 by fcharbon          #+#    #+#             */
-/*   Updated: 2023/11/06 18:32:35 by fcharbon         ###   ########.fr       */
+/*   Updated: 2023/11/17 17:06:04 by fcharbon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include "libft.h"
 
-int	memcmp(const void *s1, const void *s2, size_t n)
+int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
 	const unsigned char	*ptr1;
 	const unsigned char	*ptr2;

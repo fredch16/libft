@@ -6,9 +6,11 @@
 /*   By: fcharbon <fcharbon@student.42london.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/05 20:32:41 by fcharbon          #+#    #+#             */
-/*   Updated: 2023/11/05 20:34:03 by fcharbon         ###   ########.fr       */
+/*   Updated: 2023/11/17 14:40:59 by fcharbon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_isprint(int c)
 {

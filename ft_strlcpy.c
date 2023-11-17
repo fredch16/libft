@@ -6,11 +6,12 @@
 /*   By: fcharbon <fcharbon@student.42london.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 16:48:08 by fcharbon          #+#    #+#             */
-/*   Updated: 2023/11/06 17:23:10 by fcharbon         ###   ########.fr       */
+/*   Updated: 2023/11/17 17:57:56 by fcharbon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include "libft.h"
+#include <bsd/string.h>
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
@@ -29,3 +30,13 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 		total_src_len++;
 	return (total_src_len);
 }
+/*
+int	main()
+{
+	char src[] = "coucou";
+	char dest[10]; memset(dest, 'A', 10);
+	printf("Real function gives output:%zu\n", strlcpy(dest, src, 0));
+	printf("Fake function gives output:%zu\n", ft_strlcpy(dest, src, 0));
+	return (0);
+}
+*/

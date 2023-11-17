@@ -6,9 +6,11 @@
 /*   By: fcharbon <fcharbon@student.42london.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/15 19:54:11 by fcharbon          #+#    #+#             */
-/*   Updated: 2023/11/15 21:16:47 by fcharbon         ###   ########.fr       */
+/*   Updated: 2023/11/17 14:38:43 by fcharbon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 static int	count_words(const char *s, char c)
 {
@@ -55,7 +57,7 @@ char	**ft_split(char const *s, char c)
 
 	if (!s)
 		return (NULL);
-	result = (char **)malloc((num_words + 1) * sizeof(char *));
+	result = (char **)malloc((count_words(s, c) + 1) * sizeof(char *));
 	if (!result)
 		return (NULL);
 	word_index = 0;
@@ -63,12 +65,13 @@ char	**ft_split(char const *s, char c)
 	{
 		if (*s != c)
 		{
-			*start = s;
+			start = s;
 			while (*s && *s != c)
 				s++;
 			result[word_index++] = ft_strndup(start, s - start);
-			else
-				s++;
 		}
+		else
+			s++;
 	}
+	return (result);
 }

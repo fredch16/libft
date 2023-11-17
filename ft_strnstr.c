@@ -6,9 +6,11 @@
 /*   By: fcharbon <fcharbon@student.42london.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/05 22:06:58 by fcharbon          #+#    #+#             */
-/*   Updated: 2023/11/05 22:23:50 by fcharbon         ###   ########.fr       */
+/*   Updated: 2023/11/17 14:53:39 by fcharbon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 const char	*ft_strnstr(const char *big, const char *little, size_t len)
 {

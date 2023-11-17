@@ -6,15 +6,19 @@
 /*   By: fcharbon <fcharbon@student.42london.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/16 17:59:40 by fcharbon          #+#    #+#             */
-/*   Updated: 2023/11/16 18:03:33 by fcharbon         ###   ########.fr       */
+/*   Updated: 2023/11/17 14:55:19 by fcharbon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "libft.h"
 
+/*void	ft_putchar_fd(char c, int fd)
+{
+	write(fd, &c, 1);
+}
 int	ft_strlen(char *str)
 {
-	int	count;
+	size_t	count;
 
 	count = 0;
 	while (*str)
@@ -23,11 +27,22 @@ int	ft_strlen(char *str)
 		count++;
 	}
 	return (count);
-}
+}*/
 
 void	ft_putstr_fd(char *s, int fd)
 {
+	size_t	len;
+	size_t	counter;
+
+	counter = 0;
+	len = ft_strlen(s);
 	if (s == NULL)
 		return ;
-	write(fd, s, ft_strlen(s));
+	if (fd < 0)
+		return ;
+	while (counter <= len)
+	{
+		ft_putchar_fd(s[counter], fd);
+		counter++;
+	}
 }

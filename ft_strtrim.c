@@ -6,13 +6,15 @@
 /*   By: fcharbon <fcharbon@student.42london.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/15 16:32:43 by fcharbon          #+#    #+#             */
-/*   Updated: 2023/11/15 19:50:19 by fcharbon         ###   ########.fr       */
+/*   Updated: 2023/11/17 14:37:58 by fcharbon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strncpy(char *dest, char *src, unsigned int n)
+#include "libft.h"
+
+char	*ft_strncpy(char *dest, char const *src, size_t n)
 {
-	unsigned int	i;
+	size_t	i;
 
 	i = 0;
 	while (i < n && (src[i] != '\0'))
@@ -58,7 +60,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	trimmed = (char *)malloc((len + 1) * sizeof(char));
 	if (!trimmed)
 		return (NULL);
-	ft_strncpy(trimmed, s1[start], len);
+	ft_strncpy(trimmed, &s1[start], len);
 	trimmed[len] = '\0';
 	return (trimmed);
 }

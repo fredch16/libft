@@ -6,9 +6,11 @@
 /*   By: fcharbon <fcharbon@student.42london.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/05 20:35:56 by fcharbon          #+#    #+#             */
-/*   Updated: 2023/11/05 20:38:53 by fcharbon         ###   ########.fr       */
+/*   Updated: 2023/11/17 14:42:39 by fcharbon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 size_t	ft_strlen(const char *s)
 {
@@ -20,5 +22,5 @@ size_t	ft_strlen(const char *s)
 		len++;
 		s++;
 	}
-	return (0);
+	return (len);
 }

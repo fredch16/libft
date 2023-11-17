@@ -6,25 +6,13 @@
 /*   By: fcharbon <fcharbon@student.42london.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/18 15:30:37 by fcharbon          #+#    #+#             */
-/*   Updated: 2023/10/26 18:40:54 by fcharbon         ###   ########.fr       */
+/*   Updated: 2023/11/17 16:52:41 by fcharbon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
-char	*ft_strcat(char *dest, char *src)
-{
-	char *const	cat_string = dest;
-
-	while (*dest)
-		dest++;
-	while (*src)
-		*dest++ = *src++;
-	*dest = '\0';
-	return (cat_string);
-}
-
-int	ft_strlen(char *str)
+/* int	ft_strlen(char *str)
 {
 	int	length;
 
@@ -36,46 +24,36 @@ int	ft_strlen(char *str)
 	}
 	return (length);
 }
+*/
 
-int	total_array_len(int size, char **strs, char *sep)
+char	*ft_strcat(char *dest, char *src)
 {
-	int	total;
-	int	index;
+	char	*cat_string;
 
-	index = 0;
-	total = 0;
-	while (index < size)
-	{
-		total += ft_strlen(strs[index]);
-		index++;
-	}
-	total += (size - 1) * ft_strlen(sep) + 1;
-	return (total);
+	cat_string = dest;
+	while (*dest)
+		dest++;
+	while (*src)
+		*dest++ = *src++;
+	*dest = '\0';
+	return (cat_string);
 }
 
-char	*ft_strjoin(int size, char **strs, char *sep)
+int	total_array_len(char const *s1, char const *s2)
+{
+	return (ft_strlen(s1) + ft_strlen(s2) + 1);
+}
+
+char	*ft_strjoin(char const *s1, char const *s2)
 {
 	int		len;
-	char	*empty;
-	char	*mem;
-	int		index;
+	char	*joint;
 
-	index = 0;
-	if (size <= 0)
-	{
-		empty = malloc(1);
-		*empty = '\0';
-		return (empty);
-	}
-	len = total_array_len(size, strs, sep);
-	mem = malloc(sizeof(char) * len);
-	mem[0] = '\0';
-	while (index < size)
-	{
-		ft_strcat(mem, strs[index]);
-		if (index < size - 1)
-			ft_strcat(mem, sep);
-		index++;
-	}
-	return (mem);
+	if (*s1 == '\0' || *s2 == '\0')
+		return (NULL);
+	len = total_array_len(s1, s2);
+	joint = malloc(sizeof(char) * len);
+	ft_strcat(joint, (char *)s1);
+	ft_strcat(joint, (char *)s2);
+	return (joint);
 }

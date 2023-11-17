@@ -6,12 +6,11 @@
 /*   By: fcharbon <fcharbon@student.42london.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 19:23:08 by fcharbon          #+#    #+#             */
-/*   Updated: 2023/11/16 19:11:19 by fcharbon         ###   ########.fr       */
+/*   Updated: 2023/11/17 14:46:42 by fcharbon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <stdio.h>
+#include "libft.h"
 
 int	find_num_digits(int n)
 {

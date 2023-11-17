@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   strlcat.c                                          :+:      :+:    :+:   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fcharbon <fcharbon@student.42london.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 13:22:08 by fcharbon          #+#    #+#             */
-/*   Updated: 2023/11/06 16:42:07 by fcharbon         ###   ########.fr       */
+/*   Updated: 2023/11/17 14:55:28 by fcharbon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include "libft.h"
 
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
