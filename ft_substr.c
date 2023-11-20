@@ -6,46 +6,27 @@
 /*   By: fcharbon <fcharbon@student.42london.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 18:40:24 by fcharbon          #+#    #+#             */
-/*   Updated: 2023/11/20 17:10:00 by fcharbon         ###   ########.fr       */
+/*   Updated: 2023/11/20 23:13:29 by fcharbon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strncpy(char *dest, const char *src, size_t n)
-{
-	size_t	i;
-
-	i = 0;
-	while (i < n && src[i] != '\0')
-	{
-		dest[i] = src[i];
-		i++;
-	}
-	while (i < n)
-	{
-		dest[i] = '\0';
-		i++;
-	}
-	return (dest);
-}
-
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	size_t	slen;
 	char	*result;
+	size_t	size;
 
 	if (!s)
 		return (NULL);
-	slen = ft_strlen(s);
-	if (start + len > slen)
-		len = slen - start;
-	result = (char *)malloc(len + 1);
-	if (result == NULL)
-		return (NULL);
-	if (start >= slen || len <= 0)
+	if (start >= ft_strlen(s))
 		return (ft_strdup(""));
-	ft_strncpy(result, s + start, len);
-	result[len] = '\0';
+	size = ft_strlen(s + start);
+	if (size < len)
+		len = size;
+	result = (char *)malloc(sizeof(char) * (len + 1));
+	if (!result)
+		return (NULL);
+	ft_strlcpy(result, s + start, len + 1);
 	return (result);
 }

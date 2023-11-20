@@ -6,13 +6,14 @@
 /*   By: fcharbon <fcharbon@student.42london.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 14:34:16 by fcharbon          #+#    #+#             */
-/*   Updated: 2023/11/20 14:17:43 by fcharbon         ###   ########.fr       */
+/*   Updated: 2023/11/20 22:50:13 by fcharbon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
+# include <limits.h>
 # include <bsd/string.h>
 # include <stdio.h>
 # include <stddef.h>
