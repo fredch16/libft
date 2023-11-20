@@ -6,7 +6,7 @@
 /*   By: fcharbon <fcharbon@student.42london.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 14:34:16 by fcharbon          #+#    #+#             */
-/*   Updated: 2023/11/17 17:42:36 by fcharbon         ###   ########.fr       */
+/*   Updated: 2023/11/20 14:17:43 by fcharbon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,14 +42,14 @@ void		*ft_memmove(void *dest, const void *src, size_t n);
 void		*ft_memcpy(void *dest, const void *src, size_t n);
 void		ft_bzero(void *s, size_t n);
 void		*ft_memset(void *s, int c, size_t n);
-const char	*ft_strrchr(const char *s, int c);
-const char	*ft_strchr(const char *s, int c);
 const char	*ft_strnstr(const char	*big, const	char *little, size_t len);
 void		ft_putchar_fd(char c, int fd);
 void		ft_putstr_fd(char *s, int fd);
 void		ft_putendl_fd(char *s, int fd);
 void		ft_putnbr_fd(int n, int fd);
 void		ft_striteri(char *s, void (*f)(unsigned int, char*));
+char		*ft_strrchr(const char *s, int c);
+char		*ft_strchr(const char *s, int c);
 char		*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 char		*ft_itoa(int n);
 char		**ft_split(char const *s, char c);
