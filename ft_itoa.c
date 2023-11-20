@@ -6,7 +6,7 @@
 /*   By: fcharbon <fcharbon@student.42london.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 19:23:08 by fcharbon          #+#    #+#             */
-/*   Updated: 2023/11/17 14:46:42 by fcharbon         ###   ########.fr       */
+/*   Updated: 2023/11/20 20:19:17 by fcharbon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,32 @@ void	int_to_ascii(int num_digits, int sign, int n, char *result)
 		n /= 10;
 		temp--;
 	}
+	if (sign == -1)
+		result[0] = '-';
+	result[num_digits + (sign == -1)] = '\0';
+}
+
+char	*ft_itoa_intmin(void)
+{
+	char	*result;
+	int		temp;
+	int		n;
+
+	temp = 9;
+	n = 214748364;
+	result = (char *)malloc(sizeof(char) * 12);
+	if (result == NULL)
+		return (NULL);
+	while (temp >= 0)
+	{
+		result[temp] = '0' + (n % 10);
+		n /= 10;
+		temp--;
+	}
+	result[0] = '-';
+	result[10] = '8';
+	result[11] = '\0';
+	return (result);
 }
 
 char	*ft_itoa(int n)
@@ -47,6 +73,11 @@ char	*ft_itoa(int n)
 	sign = 1;
 	if (n < 0)
 	{
+		if (n == -2147483648)
+		{
+			result = ft_itoa_intmin();
+			return (result);
+		}
 		sign = -1;
 		n = -n;
 	}
@@ -55,8 +86,5 @@ char	*ft_itoa(int n)
 	if (result == NULL)
 		return (NULL);
 	int_to_ascii(num_digits, sign, n, result);
-	if (sign == -1)
-		result[0] = '-';
-	result[num_digits + (sign == -1)] = '\0';
 	return (result);
 }
