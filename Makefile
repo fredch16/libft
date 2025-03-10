@@ -6,7 +6,7 @@
 #    By: fredchar <fredchar@student.42heilbronn.    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/03/10 12:58:21 by fredchar          #+#    #+#              #
-#    Updated: 2025/03/10 17:17:11 by fredchar         ###   ########.fr        #
+#    Updated: 2025/03/10 20:07:16 by fredchar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,6 +19,7 @@ OBJD := obj
 # Colors
 GREEN := \033[0;32m
 YELLOW := \033[0;33m
+RED := \033[0;31m
 NC := \033[0m # No Color
 
 # Spinner animation
@@ -37,6 +38,20 @@ SRCS := ft_isalnum.c \
 		ft_bzero.c \
 		ft_strchr.c \
 		ft_strrchr.c \
+		ft_memcmp.c \
+		ft_memcpy.c \
+		ft_memchr.c \
+		ft_memmove.c \
+		ft_strlcat.c \
+		ft_strncmp.c \
+		ft_strnstr.c \
+		ft_strlcpy.c \
+		ft_strjoin.c \
+		ft_substr.c \
+		ft_split.c \
+		ft_strtrim.c \
+		ft_strdup.c \
+		ft_itoa.c \
 
 OBJS := $(SRCS:%.c=$(OBJD)/%.o)
 
@@ -59,10 +74,14 @@ $(NAME): $(OBJS)
 	ar rcs $(NAME) $(OBJS)
 
 clean:
+	@printf "$(RED)Cleaning object files...$(NC)\n"
 	rm -rf $(OBJD)
+	@printf "$(GREEN)Object files cleaned!$(NC)\n"
 
 fclean: clean
+	@printf "$(RED)Cleaning library ...$(NC)\n"
 	rm -f $(NAME)
+	@printf "$(GREEN)Library cleaned!$(NC)\n"
 
 re: fclean all
 
