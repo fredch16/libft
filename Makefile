@@ -6,7 +6,7 @@
 #    By: fredchar <fredchar@student.42heilbronn.    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/03/10 12:58:21 by fredchar          #+#    #+#              #
-#    Updated: 2025/03/10 13:49:11 by fredchar         ###   ########.fr        #
+#    Updated: 2025/03/10 17:17:11 by fredchar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -33,6 +33,10 @@ SRCS := ft_isalnum.c \
 		ft_tolower.c \
 		ft_strlen.c \
 		ft_atoi.c \
+		ft_memset.c \
+		ft_bzero.c \
+		ft_strchr.c \
+		ft_strrchr.c \
 
 OBJS := $(SRCS:%.c=$(OBJD)/%.o)
 

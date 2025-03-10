@@ -6,15 +6,15 @@
 /*   By: fredchar <fredchar@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/10 12:37:27 by fredchar          #+#    #+#             */
-/*   Updated: 2025/03/10 13:26:49 by fredchar         ###   ########.fr       */
+/*   Updated: 2025/03/10 15:58:14 by fredchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_tolower(unsigned char c)
+int	ft_tolower(unsigned char c)
 {
-    if (c >= 'A' && c <= 'Z')
-        c += 32;
-    return (c);
+	if (c >= 'A' && c <= 'Z')
+		c += 32;
+	return (c);
 }

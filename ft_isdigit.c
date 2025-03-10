@@ -6,13 +6,13 @@
 /*   By: fredchar <fredchar@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/10 12:11:44 by fredchar          #+#    #+#             */
-/*   Updated: 2025/03/10 13:27:05 by fredchar         ###   ########.fr       */
+/*   Updated: 2025/03/10 15:57:49 by fredchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_isdigit(unsigned char c)
+int	ft_isdigit(unsigned char c)
 {
-    return (c >= '0' && c <= '9');
+	return (c >= '0' && c <= '9');
 }

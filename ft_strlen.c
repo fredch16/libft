@@ -6,16 +6,18 @@
 /*   By: fredchar <fredchar@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/10 13:17:33 by fredchar          #+#    #+#             */
-/*   Updated: 2025/03/10 13:26:55 by fredchar         ###   ########.fr       */
+/*   Updated: 2025/03/10 15:58:08 by fredchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_strlen(char *str)
-{
-    int i;
+#include "libft.h"
 
-    i = 0;
-    while (str[i])
-        i++;
-    return (i);
+size_t	ft_strlen(char *str)
+{
+	size_t i;
+
+	i = 0;
+	while (str[i])
+		i++;
+	return (i);
 }
