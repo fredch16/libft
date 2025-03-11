@@ -6,7 +6,7 @@
 /*   By: fredchar <fredchar@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/10 16:00:41 by fredchar          #+#    #+#             */
-/*   Updated: 2025/03/10 16:00:48 by fredchar         ###   ########.fr       */
+/*   Updated: 2025/03/11 16:53:00 by fredchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ const char	*ft_strnstr(const char *big, const char *little, size_t len)
 	const char	*likkle1;
 	size_t		remaining;
 
+	if (big == NULL && len == 0)
+		return (NULL);
 	if (*little == '\0')
 		return (big);
 	while (*big != '\0' && len > 0)

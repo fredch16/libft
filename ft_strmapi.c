@@ -1,35 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fredchar <fredchar@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/03/10 16:26:33 by fredchar          #+#    #+#             */
-/*   Updated: 2025/03/11 16:43:14 by fredchar         ###   ########.fr       */
+/*   Created: 2025/03/11 11:44:31 by fredchar          #+#    #+#             */
+/*   Updated: 2025/03/11 12:49:47 by fredchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strrchr(const char *s, int c)
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	char	*last;
-	int		found;
+	unsigned int	len;
+	unsigned int	i;
+	char			*result;
 
-	found = 0;
-	while (*s)
+	if (s == NULL || f == NULL)
+		return (NULL);
+	len = 0;
+	while (s[len] != '\0')
+		len++;
+	result = (char *)malloc((len + 1) * sizeof(char));
+	if (result == NULL)
+		return (NULL);
+	i = 0;
+	while (i < len)
 	{
-		if (*s == c)
-		{
-			last = (char *)s;
-			found = 1;
-		}
-		s++;
+		result[i] = f(i, s[i]);
+		i++;
 	}
-	if (c == '\0')
-		return ((char *)s);
-	if (found)
-		return (last);
-	return (NULL);
+	result[len] = '\0';
+	return (result);
 }

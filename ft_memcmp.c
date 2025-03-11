@@ -6,7 +6,7 @@
 /*   By: fredchar <fredchar@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/10 15:29:17 by fredchar          #+#    #+#             */
-/*   Updated: 2025/03/10 17:51:52 by fredchar         ###   ########.fr       */
+/*   Updated: 2025/03/11 16:25:51 by fredchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	while (i < n)
 	{
 		if (ptr1[i] < ptr2[i])
-			return (ptr2[i] - ptr1[i]);
+			return (ptr1[i] - ptr2[i]);
 		else if (ptr1[i] > ptr2[i])
 			return (ptr1[i] - ptr2[i]);
 		i++;

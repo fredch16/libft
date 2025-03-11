@@ -6,7 +6,7 @@
 #    By: fredchar <fredchar@student.42heilbronn.    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/03/10 12:58:21 by fredchar          #+#    #+#              #
-#    Updated: 2025/03/10 20:07:16 by fredchar         ###   ########.fr        #
+#    Updated: 2025/03/11 15:38:44 by fredchar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -52,8 +52,25 @@ SRCS := ft_isalnum.c \
 		ft_strtrim.c \
 		ft_strdup.c \
 		ft_itoa.c \
+		ft_striteri.c \
+		ft_strmapi.c \
+		ft_putchar_fd.c \
+		ft_putstr_fd.c \
+		ft_putendl_fd.c \
+		ft_putnbr_fd.c \
+
+BONUS_SRCS :=	ft_lstnew.c \
+				ft_lstadd_front.c \
+				ft_lstlast.c \
+				ft_lstadd_back.c \
+				ft_lstdelone.c \
+				ft_lstclear.c \
+				ft_lstiter.c \
+				ft_lstmap.c \
+
 
 OBJS := $(SRCS:%.c=$(OBJD)/%.o)
+BONUS_OBJS := $(BONUS_SRCS:%.c=$(OBJD)/%.o)
 
 all: $(NAME)
 
@@ -85,4 +102,7 @@ fclean: clean
 
 re: fclean all
 
-.PHONY: all clean fclean re
+bonus: $(OBJS) $(BONUS_OBJS)
+	ar rcs $(NAME) $(OBJS) $(BONUS_OBJS)
+
+.PHONY: all clean fclean re bonus

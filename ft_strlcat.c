@@ -6,7 +6,7 @@
 /*   By: fredchar <fredchar@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/10 17:33:04 by fredchar          #+#    #+#             */
-/*   Updated: 2025/03/10 17:36:22 by fredchar         ###   ########.fr       */
+/*   Updated: 2025/03/11 16:53:25 by fredchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
 	unsigned int	src_len;
 	unsigned int	i;
 
+	if (!dest && size == 0)
+		return (0);
 	dest_len = 0;
 	src_len = 0;
 	while (dest[dest_len] != '\0' && dest_len < size)
