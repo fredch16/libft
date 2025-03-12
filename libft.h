@@ -6,7 +6,7 @@
 /*   By: fredchar <fredchar@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/10 12:04:28 by fredchar          #+#    #+#             */
-/*   Updated: 2025/03/11 17:53:20 by fredchar         ###   ########.fr       */
+/*   Updated: 2025/03/12 13:17:11 by fredchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,23 +26,23 @@ typedef struct s_list
 
 // basic functions
 
-int				ft_isalnum(unsigned char c);
-int				ft_isalpha(unsigned char c);
-int				ft_isdigit(unsigned char c);
-int				ft_isprint(unsigned char c);
-int				ft_isascii(unsigned char c);
-int				ft_toupper(unsigned char c);
-int				ft_tolower(unsigned char c);
-size_t			ft_strlen(char *str);
+int				ft_isalnum(int c);
+int				ft_isalpha(int c);
+int				ft_isdigit(int c);
+int				ft_isprint(int c);
+int				ft_isascii(int c);
+int				ft_toupper(int c);
+int				ft_tolower(int c);
+size_t			ft_strlen(const char *str);
 int				ft_atoi(char *str);
 void			ft_bzero(void *s, size_t n);
 void			*ft_memset(void *s, int c, size_t n);
 char			*ft_strchr(const char *s, int c);
 char			*ft_strrchr(const char *s, int c);
-const char		*ft_strnstr(const char *big, const char *little, size_t len);
+char			*ft_strnstr(const char *big, const char *little, size_t len);
 int				ft_strncmp(char *s1, char *s2, unsigned int n);
 int				ft_atoi(char *str);
-unsigned int	ft_strlcat(char *dest, char *src, unsigned int size);
+unsigned int	ft_strlcat(char *dest, const char *src, unsigned int size);
 unsigned int	ft_strlcpy(char *dst, const char *src, unsigned int dstsize);
 
 // memory functions

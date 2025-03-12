@@ -6,7 +6,7 @@
 #    By: fredchar <fredchar@student.42heilbronn.    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/03/10 12:58:21 by fredchar          #+#    #+#              #
-#    Updated: 2025/03/11 17:51:40 by fredchar         ###   ########.fr        #
+#    Updated: 2025/03/12 12:59:39 by fredchar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -58,6 +58,7 @@ SRCS :=			ft_isalnum.c \
 				ft_putstr_fd.c \
 				ft_putendl_fd.c \
 				ft_putnbr_fd.c \
+				ft_calloc.c \
 
 BONUS_SRCS :=	ft_lstnew.c \
 				ft_lstadd_front.c \
@@ -67,6 +68,7 @@ BONUS_SRCS :=	ft_lstnew.c \
 				ft_lstclear.c \
 				ft_lstiter.c \
 				ft_lstmap.c \
+				ft_lstsize.c \
 
 
 OBJS := $(SRCS:%.c=$(OBJD)/%.o)

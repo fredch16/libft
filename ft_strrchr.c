@@ -6,7 +6,7 @@
 /*   By: fredchar <fredchar@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/10 16:26:33 by fredchar          #+#    #+#             */
-/*   Updated: 2025/03/11 16:43:14 by fredchar         ###   ########.fr       */
+/*   Updated: 2025/03/12 13:21:21 by fredchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char	*ft_strrchr(const char *s, int c)
 	found = 0;
 	while (*s)
 	{
-		if (*s == c)
+		if (*s == (char)c)
 		{
 			last = (char *)s;
 			found = 1;

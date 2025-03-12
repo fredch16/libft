@@ -6,13 +6,13 @@
 /*   By: fredchar <fredchar@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/10 12:30:49 by fredchar          #+#    #+#             */
-/*   Updated: 2025/03/11 12:35:18 by fredchar         ###   ########.fr       */
+/*   Updated: 2025/03/12 13:07:27 by fredchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isprint(unsigned char c)
+int	ft_isprint(int c)
 {
 	return (c >= 32 && c <= 126);
 }
