@@ -58,19 +58,17 @@
 * [`ft_strmapi`](libft/ft_strmapi.c)			  - create new string from modifying string with specified function.
 * [`ft_striteri`](libft/ft_striteri.c)			  - applies the specific function on each character of the string.
 
-### Non-standard functions
-* [`ft_putchar_fd`](libft/ft_putchar_fd.c)	- output a character to given file.
-* [`ft_putstr_fd`](libft/ft_putstr_fd.c)		- output string to given file.
-* [`ft_putendl_fd`](libft/ft_putendl_fd.c)	- output string to given file with newline.
-* [`ft_putnbr_fd`](libft/ft_putnbr_fd.c)		- output integer to given file.
-* [`ft_itoa`](libft/ft_itoa.c)					    - convert integer to ASCII string.
-* [`ft_substr`](libft/ft_substr.c)				  - extract substring from string.
-* [`ft_strtrim`](libft/ft_strtrim.c)			  - trim beginning and end of string with the specified characters.
-* [`ft_strjoin`](libft/ft_strjoin.c)			  - concatenate two strings into a new string (with malloc).
-* [`ft_split`](libft/ft_split.c)				    - split string, with specified character as delimiter, into an array of strings.
-* [`ft_strmapi`](libft/ft_strmapi.c)			  - create new string from modifying string with specified function.
-* [`ft_striteri`](libft/ft_striteri.c)			  - applies the specific function on each character of the string.
+### Linked list functions
 
+* [`ft_lstnew`](libft/srcs/lst/ft_lstnew.c)				- create new list.
+* [`ft_lstsize`](libft/srcs/lst/ft_lstsize.c)			- count elements of a list.
+* [`ft_lstlast`](libft/srcs/lst/ft_lstlast.c)			- find last element of list.
+* [`ft_lstadd_back`](libft/srcs/lst/ft_lstadd_back.c)	- add new element at end of list.
+* [`ft_lstadd_front`](libft/srcs/lst/ft_lstadd_front.c)	- add new element at beginning of list.
+* [`ft_lstdelone`](libft/srcs/lst/ft_lstdelone.c)		- delete element from list.
+* [`ft_lstclear`](libft/srcs/lst/ft_lstclear.c)			- delete sequence of elements of list from a starting point.
+* [`ft_lstiter`](libft/srcs/lst/ft_lstiter.c)			- apply function to content of all list's elements.
+* [`ft_lstmap`](libft/srcs/lst/ft_lstmap.c)				- apply function to content of all list's elements into new list.
 
 ## 👨‍💻 Usage
 ### Requirements
