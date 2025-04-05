@@ -6,17 +6,16 @@
 #    By: fredchar <fredchar@student.42heilbronn.    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/03/10 12:58:21 by fredchar          #+#    #+#              #
-#    Updated: 2025/04/05 15:00:41 by fredchar         ###   ########.fr        #
+#    Updated: 2025/03/13 16:59:06 by fredchar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME := libft.a
+NAME := libftprintf.a
 CC := gcc
 CFLAGS := -Wall -Wextra -Werror
-INCD := includes
+INCD := include
+SRCD := src
 OBJD := obj
-PRINTF_DIR := ../ft_printf
-PRINTF_LIB := $(PRINTF_DIR)/libftprintf.a
 
 # Colors
 GREEN := \033[0;32m
@@ -27,62 +26,17 @@ NC := \033[0m # No Color
 # Spinner animation
 SPINNER := / - \\ \|
 
-SRCS :=			ft_isalnum.c \
-				ft_isalpha.c \
-				ft_isdigit.c \
-				ft_isprint.c \
-				ft_isascii.c \
-				ft_toupper.c \
-				ft_tolower.c \
-				ft_strlen.c \
-				ft_atoi.c \
-				ft_memset.c \
-				ft_bzero.c \
-				ft_strchr.c \
-				ft_strrchr.c \
-				ft_memcmp.c \
-				ft_memcpy.c \
-				ft_memchr.c \
-				ft_memmove.c \
-				ft_strlcat.c \
-				ft_strncmp.c \
-				ft_strnstr.c \
-				ft_strlcpy.c \
-				ft_strjoin.c \
-				ft_substr.c \
-				ft_split.c \
-				ft_strtrim.c \
-				ft_strdup.c \
-				ft_itoa.c \
-				ft_striteri.c \
-				ft_strmapi.c \
-				ft_putchar_fd.c \
-				ft_putstr_fd.c \
-				ft_putendl_fd.c \
-				ft_putnbr_fd.c \
-				ft_calloc.c \
+SRCS :=			$(SRCD)/printf.c \
+				$(SRCD)/print_str.c \
+				$(SRCD)/print_char.c \
+				$(SRCD)/print_nbr_base.c \
+				$(SRCD)/print_pointer.c \
 
-BONUS_SRCS :=	ft_lstnew.c \
-				ft_lstadd_front.c \
-				ft_lstlast.c \
-				ft_lstadd_back.c \
-				ft_lstdelone.c \
-				ft_lstclear.c \
-				ft_lstiter.c \
-				ft_lstmap.c \
-				ft_lstsize.c \
+OBJS := $(SRCS:$(SRCD)/%.c=$(OBJD)/%.o)
 
+all: $(NAME)
 
-OBJS := $(SRCS:%.c=$(OBJD)/%.o)
-BONUS_OBJS := $(BONUS_SRCS:%.c=$(OBJD)/%.o)
-
-all: $(NAME) $(PRINTF_LIB)
-
-$(PRINTF_LIB):
-	@printf "$(YELLOW)Building ft_printf library...$(NC)\n"
-	@$(MAKE) -C $(PRINTF_DIR)
-
-$(OBJD)/%.o: %.c | $(OBJD)
+$(OBJD)/%.o: $(SRCD)/%.c | $(OBJD)
 	@i=0; \
 	while [ $$i -lt 4 ]; do \
 		printf "\r$(YELLOW)Compiling $<... $${SPINNER:$$i:1}$(NC)"; \
@@ -102,17 +56,12 @@ clean:
 	@printf "$(RED)Cleaning object files...$(NC)\n"
 	rm -rf $(OBJD)
 	@printf "$(GREEN)Object files cleaned!$(NC)\n"
-	@$(MAKE) -C $(PRINTF_DIR) clean
 
 fclean: clean
 	@printf "$(RED)Cleaning library ...$(NC)\n"
 	rm -f $(NAME)
 	@printf "$(GREEN)Library cleaned!$(NC)\n"
-	@$(MAKE) -C $(PRINTF_DIR) fclean
 
 re: fclean all
 
-bonus: $(OBJS) $(BONUS_OBJS)
-	ar rcs $(NAME) $(OBJS) $(BONUS_OBJS)
-
-.PHONY: all clean fclean re bonus
+.PHONY: all clean fclean re

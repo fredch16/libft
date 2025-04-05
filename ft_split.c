@@ -6,7 +6,7 @@
 /*   By: fredchar <fredchar@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/10 19:12:50 by fredchar          #+#    #+#             */
-/*   Updated: 2025/03/13 12:35:33 by fredchar         ###   ########.fr       */
+/*   Updated: 2025/03/18 19:25:55 by fredchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,3 +58,5 @@ char	**ft_split(char const *s, char c)
 	result[index] = 0;
 	return (result);
 }
+
+// Hello,Bye
